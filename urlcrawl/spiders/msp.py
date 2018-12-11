@@ -23,7 +23,7 @@ class msp(scrapy.Spider):
         for box in response.xpath('//body'):
             item['name']=box.xpath('//h1[@class="movie-title"]/text()').extract_first()
             item['year']=box.xpath('//h1[@class="movie-title"]/span/text()').extract_first()
-            item['ftype']=box.xpath('//ol[@class="breadcrumb"]/li[2]/a/text()').extract_first()
+            item['film_type']=box.xpath('//ol[@class="breadcrumb"]/li[2]/a/text()').extract_first()
             item['jpg']=box.xpath('//a/img/@src').extract_first()
             yield item
     

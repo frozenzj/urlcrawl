@@ -12,5 +12,5 @@ class UrlcrawlItem(scrapy.Item):
     # define the fields for your item here like:
     name = scrapy.Field()
     year = scrapy.Field()
-    ftype = scrapy.Field()
+    film_type = scrapy.Field()
     jpg = scrapy.Field()
